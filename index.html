@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Deezweb</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <header> 
-        <img class="logo" src="image/Deezerlogo.png">
-        <ul class='nav-bar'>
-            <li><a href="index.html">Page d'accueil</a></li>
-            <li><a href="recherche.html">Mes recherches</a></li>
-            <li><a href="favori.html">Mes favories</a></li>
-        </ul>
-    </header>
 
+<body>
+    <header>
+        <ul>
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li><a href="favori.html">Favori</a></li>
+        </ul>
+
+    </header>
     <main>
         <section>
-            <h1>titre</h1>
-            <p>paragraphe de présentation</p>
+            <h1>Bienvenue sur Deezweb</h1>
+            <p>Voici la page d'accueil du site</p>
         </section>
     </main>
+    <footer>
+        <audio controls>
+
+        </audio>
+        <button id="musique aléatoire" onclick="randomMusic()">Changer de musique</button>
+    </footer>
+    
+    <script src="js/fonction.js"></script>
 </body>
+
 </html>

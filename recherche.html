@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Deezweb</title>
+    <link href="recherche.css" rel="stylesheet">
 </head>
+
 <body>
-    <header> 
-        <img class="logo" src="image/Deezerlogo.png">
-        <ul class='nav-bar'>
-            <li><a href="index.html">Page d'accueil</a></li>
-            <li><a href="recherche.html">Mes recherches</a></li>
-            <li><a href="favori.html">Mes favories</a></li>
+    <header>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a class="active" href="recherche.html">Recherche</a></li>
+            <li><a href="favori.html">Favori</a></li>
         </ul>
+
     </header>
     <main>
         <article>
             <h1>
-                titre
+                Reherche
             </h1>
 
             <p>
-                paragraphe
+                Rechercher vos musiques préféré
             </p>
         </article>
-        <article>
+        <article class="formulaire">
             <form action="" method="get" class="title">
                 <div class="title">
-                <label for="Titre">Titre : </label>
-                <input type="text" name="name" id="name" required>
+                    <label for="Titre">Trier par titre : </label>
+                    <input type="text" name="name" id="necherche" required>
                 </div>
-        </article>
-        <article>
-            <label for="select">Trier par : </label>
-            <select name="select">
-            <option></option>
-            <option></option>
-            <option></option>
-          </select>
+
+                <br>
+
+                <label for="select">Trier par genre: </label>
+                <select name="select" id="preference">
+                    <option>Par Album (croissant)</option>
+                    <option>Par Artiste (croissant)</option>
+                    <option>Par Titre (croissant)</option>
+                    <option>Par Popularité</option>
+                    <option>Par Rang</option>
+                </select>
         </article>
     </main>
+    <footer>
+        <audio controls>
+
+        </audio>
+        <button id="favorite" onclick="addFavorite()">Ajouter au favori</button>
+    </footer>
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script>
+        let recherche = $('#recherche').val();
+        let preference = $('#preference').val();
+        let URL = `https://api.deezer.com/search?q=${recherche}&order=${preference}&output=jsonp`;
+
+        $.ajax({
+            url: `https://api.deezer.com/search?q=${recherche}&order=${preference}`,
+            dataType: "jsonp",
+        }).then((result) => {
+            console.log("Résultat :", result.data);
+            alert.error("Aucun résultat trouvé")
+        
+        
+        });
+    </script>
+
+<script src="js/fonction.js"></script>
 </body>
 
-<!--<script src="https://unpkg.com/jquery"></script>
-    <script>
-      $.ajax({
-        url: `https://api.deezer.com/search?q=eminem&output=jsonp`,
-        dataType: "jsonp",
-      }).then((result) => {
-        console.log("Résultat :", result.data);
-      });
-    </script>-->
+</body>
+
 
 </html>
