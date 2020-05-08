@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Deezweb</title>
-    <link href="recherche.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/recherche.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
     <script src="https://unpkg.com/jquery"></script>
     <script>
         let recherche = $('#recherche').val();
-        let preference = $('#preference').val();
+        let preference = $('#preference').val( TRACK_ASC, ARTIST_ASC, ALBUM_ASC, RATING_ASC, DURATION_ASC);
         let URL = `https://api.deezer.com/search?q=${recherche}&order=${preference}&output=jsonp`;
 
         $.ajax({

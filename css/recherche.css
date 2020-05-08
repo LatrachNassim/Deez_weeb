@@ -23,14 +23,9 @@ ul {
     background-color: #111;
   }
 
-  h1 {
-    text-align: center;
-}
+ #favorite {
+  background-color: #F08080;
+  color:white;
+ }
 
-p {
-    text-align: center;
-}
-
-#deletefavorite {
-  background-color:#008CBA;
-}
+ 

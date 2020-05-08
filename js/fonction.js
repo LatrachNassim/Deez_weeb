@@ -4,8 +4,8 @@ let favorite = [''];
 
 function addFavorite() {
     for (let i = 0; i < favorite.length; i++) {
-        if (favorite != undefined) {
-            console.log(favorite[i]);
+        if (favorite.length[i] != undefined) {
+            console.log(favorite.length[i]);
         } else {
             console.log("Vous n'avez aucune musique dans vos favories");
         }

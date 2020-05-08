@@ -23,6 +23,16 @@ ul {
     background-color: #111;
   }
 
- #favorite {
-  background-color: #F08080;
- }
+  h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#deletefavorite {
+  background-color:#008CBA;
+  color:white;
+}
+
